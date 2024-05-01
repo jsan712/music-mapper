@@ -137,10 +137,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         [Tooltip("Whether to spawn each object as a child of this object.")]
         bool m_SpawnAsChildren;
 
-        [SerializeField]
-        [Tooltip("Whether to destroy the object upon another placement of the same object.")]
-        bool m_DestroyOnPlacement;
-
         /// <summary>
         /// Whether to spawn each object as a child of this object.
         /// </summary>
@@ -196,12 +192,6 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         /// <seealso cref="objectSpawned"/>
         public bool TrySpawnObject(Vector3 spawnPoint, Vector3 spawnNormal)
         {
-            GameObject lastSpawnedObject = null;
-            if (GameObject.Find("Bookshelf") != null)
-            {
-                lastSpawnedObject = GameObject.Find("Bookshelf");
-            }
-
             if (m_OnlySpawnInView)
             {
                 var inViewMin = m_ViewportPeriphery;
@@ -215,15 +205,16 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
 
             var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
+
+            if (objectIndex == 7 && GameObject.FindWithTag("Bookshelf") != null)
+            {
+                Destroy(GameObject.FindWithTag("Bookshelf"));
+            }
+
             var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
+
             if (m_SpawnAsChildren)
                 newObject.transform.parent = transform;
-
-            // If object already exists and user is trying to spawn a new object, destroy the previously existing object.
-            if (m_DestroyOnPlacement && lastSpawnedObject != null)
-            {
-                Destroy(lastSpawnedObject);
-            }
 
             newObject.transform.position = spawnPoint;
             EnsureFacingCamera();
