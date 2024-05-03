@@ -206,7 +206,7 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
 
             var objectIndex = isSpawnOptionRandomized ? Random.Range(0, m_ObjectPrefabs.Count) : m_SpawnOptionIndex;
 
-            if (objectIndex == 7 && GameObject.FindWithTag("Bookshelf") != null)
+            if (objectIndex == 0 && GameObject.FindWithTag("Bookshelf") != null)
             {
                 Destroy(GameObject.FindWithTag("Bookshelf"));
             }
