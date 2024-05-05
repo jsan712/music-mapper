@@ -152,6 +152,8 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
         /// <seealso cref="TrySpawnObject"/>
         public event Action<GameObject> objectSpawned;
 
+        public GameObject node;
+
         /// <summary>
         /// See <see cref="MonoBehaviour"/>.
         /// </summary>
@@ -212,6 +214,11 @@ namespace UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets
             }
 
             var newObject = Instantiate(m_ObjectPrefabs[objectIndex]);
+
+            /*if (newObject.CompareTag("Node") == true)
+            {
+                Debug.Log("Node spawned");
+            }*/
 
             if (m_SpawnAsChildren)
                 newObject.transform.parent = transform;

@@ -197,10 +197,24 @@ public class ARTemplateMenuManager : MonoBehaviour
         set => m_DebugMenuSlider = value;
     }
 
+    [SerializeField]
+    [Tooltip("The modal with node options.")]
+    GameObject m_NodeMenu;
+
+    /// <summary>
+    /// The node options menu.
+    /// </summary>
+    public GameObject nodeMenu
+    {
+        get => m_NodeMenu;
+        set => m_NodeMenu = value;
+    }
+
     bool m_IsPointerOverUI;
     bool m_ShowObjectMenu;
     bool m_ShowOptionsModal;
     bool m_InitializingDebugMenu;
+    bool m_ShowNodeOptionsModal;
     Vector2 m_ObjectButtonOffset = Vector2.zero;
     Vector2 m_ObjectMenuOffset = Vector2.zero;
     readonly List<ARFeatheredPlaneMeshVisualizerCompanion> featheredPlaneMeshVisualizerCompanions = new List<ARFeatheredPlaneMeshVisualizerCompanion>();
@@ -300,6 +314,7 @@ public class ARTemplateMenuManager : MonoBehaviour
             if (m_ObjectSpawner.objectPrefabs.Count > objectIndex)
             {
                 m_ObjectSpawner.spawnOptionIndex = objectIndex;
+                
             }
             else
             {
@@ -533,6 +548,23 @@ public class ARTemplateMenuManager : MonoBehaviour
                     visualizer.visualizeSurfaces = (m_DebugPlaneSlider.value != 0);
                 }
             }
+        }
+    }
+
+    /// <summary>
+    /// Shows or hides the node options menu when the node is clicked.
+    /// </summary>
+    public void ShowHideMenu()
+    {
+        if (m_NodeMenu.activeSelf)
+        {
+            m_ShowNodeOptionsModal = false;
+            m_NodeMenu.SetActive(false);
+        }
+        else
+        {
+            m_ShowNodeOptionsModal = true;
+            m_NodeMenu.SetActive(true);
         }
     }
 }

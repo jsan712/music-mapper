@@ -8,9 +8,24 @@ public class Song : MonoBehaviour
     [SerializeField] private float _previewStart;
 
     private float _previewDuration = 30.0f;
+    private ARTemplateMenuManager _arMenuManger;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
+        ARTemplateMenuManager potential_ARMenuManager = GameObject.Find("UI").GetComponent<ARTemplateMenuManager>();
+
+        if (potential_ARMenuManager != null)
+        {
+            _arMenuManger = potential_ARMenuManager;
+        }
+        else
+        {
+            _arMenuManger = null;
+        }
     }
 
     public void RecievePreview(bool isSelected)
