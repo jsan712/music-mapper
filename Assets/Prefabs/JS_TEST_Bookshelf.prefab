@@ -190,7 +190,7 @@ MonoBehaviour:
       - m_Target: {fileID: 4403543876919748757}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1036,7 +1036,7 @@ MonoBehaviour:
       - m_Target: {fileID: 3358541935447470819}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1960,7 +1960,7 @@ MonoBehaviour:
       - m_Target: {fileID: 8688237747809231997}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2383,7 +2383,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1308341803686520185}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
