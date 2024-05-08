@@ -6,8 +6,8 @@ using TMPro;
 // This code was adapted from Brackey's YouTube video titled "SETTINGS MENU in Unity".
 public class OptionsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
-    public AudioSource audioSource;
+    //public AudioMixer audioMixer;
+    private AudioSource audioSource;
 
     private bool pause = false;
     [SerializeField] private bool loop;
@@ -15,12 +15,13 @@ public class OptionsMenu : MonoBehaviour
 
     private void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void SetVolume (float volume)
     {
-        audioMixer.SetFloat("volume", volume);
+        //audioMixer.SetFloat("volume", volume);
+        audioSource.volume = volume;
     }
 
     public void PlayPause(bool pause)

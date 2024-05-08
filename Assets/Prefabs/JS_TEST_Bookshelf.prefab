@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8291807707823472125}
   - component: {fileID: 6621858061504071122}
   - component: {fileID: 4403543876919748757}
+  - component: {fileID: 8301330071258147028}
   m_Layer: 0
   m_Name: BonnieClyde
   m_TagString: Untagged
@@ -190,6 +191,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4403543876919748757}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 8301330071258147028}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -423,6 +436,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6621858061504071122}
   _previewStart: 42
+--- !u!114 &8301330071258147028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574472246861059715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 0
 --- !u!1 &2278705949710120702
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +466,7 @@ GameObject:
   - component: {fileID: 1644112838370299128}
   - component: {fileID: 2105652796648178691}
   - component: {fileID: 6017195304265349765}
+  - component: {fileID: 11796540979240679}
   m_Layer: 0
   m_Name: SecondBest
   m_TagString: Untagged
@@ -609,7 +637,31 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2105652796648178691}
+        m_TargetAssemblyTypeName: Song, Assembly-CSharp
+        m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11796540979240679}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -846,6 +898,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &11796540979240679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2278705949710120702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 4
 --- !u!1 &3842493290115163590
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,6 +928,7 @@ GameObject:
   - component: {fileID: 6296301797299991746}
   - component: {fileID: 6675105789759513126}
   - component: {fileID: 3358541935447470819}
+  - component: {fileID: 648340890325166802}
   m_Layer: 0
   m_Name: ThunderyLightning
   m_TagString: Untagged
@@ -1036,6 +1103,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3358541935447470819}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 648340890325166802}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1269,6 +1348,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 6675105789759513126}
   _previewStart: 0
+--- !u!114 &648340890325166802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842493290115163590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 3
 --- !u!1 &4174051722176261035
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1879,7 @@ GameObject:
   - component: {fileID: 2284026734082506989}
   - component: {fileID: 9141983191415670061}
   - component: {fileID: 8688237747809231997}
+  - component: {fileID: 866359636087678649}
   m_Layer: 0
   m_Name: PosterBoy
   m_TagString: Untagged
@@ -1960,6 +2054,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8688237747809231997}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 866359636087678649}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2193,6 +2299,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 9141983191415670061}
   _previewStart: 32
+--- !u!114 &866359636087678649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5911716872309661702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 1
 --- !u!1 &7160507545175322176
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2329,7 @@ GameObject:
   - component: {fileID: 4055230279179393953}
   - component: {fileID: 1406564233476576853}
   - component: {fileID: 1308341803686520185}
+  - component: {fileID: 7396456631064731798}
   m_Layer: 0
   m_Name: GlimpseofUs
   m_TagString: Untagged
@@ -2383,6 +2504,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1308341803686520185}
         m_TargetAssemblyTypeName: Song, Assembly-CSharp
         m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7396456631064731798}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2616,6 +2749,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1406564233476576853}
   _previewStart: 50
+--- !u!114 &7396456631064731798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7160507545175322176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 2
 --- !u!1 &8528164230428854792
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,6 +2810,7 @@ GameObject:
   - component: {fileID: 1096547106461625532}
   - component: {fileID: 1013911590459977148}
   - component: {fileID: 6372479968180083414}
+  - component: {fileID: 5250313875642845396}
   m_Layer: 0
   m_Name: MalaGente
   m_TagString: Untagged
@@ -2833,7 +2981,31 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6372479968180083414}
+        m_TargetAssemblyTypeName: Song, Assembly-CSharp
+        m_MethodName: RecievePreview
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5250313875642845396}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3070,3 +3242,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 1013911590459977148}
   _previewStart: 44
+--- !u!114 &5250313875642845396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9215254261204176281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb1cae7680b9aef4b836fdfa5ca9b00d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  node: {fileID: 3534175059722925671, guid: a51192d52572148458a26f98b45d21e1, type: 3}
+  song: 5

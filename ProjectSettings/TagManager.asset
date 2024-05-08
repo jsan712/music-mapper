@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bookshelf
+  - Options
   layers:
   - Default
   - TransparentFX
