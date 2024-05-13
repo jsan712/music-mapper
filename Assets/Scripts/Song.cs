@@ -6,29 +6,16 @@ public class Song : MonoBehaviour
 {
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private float _previewStart;
+    [SerializeField] private GameObject songInformation;
 
     private float _previewDuration = 30.0f;
-    // private ARTemplateMenuManager _arMenuManger;
     private int numTouch;
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        songInformation.SetActive(false);
         numTouch = 0;
     }
-
-    /*private void Update()
-    {
-        ARTemplateMenuManager potential_ARMenuManager = GameObject.Find("UI").GetComponent<ARTemplateMenuManager>();
-
-        if (potential_ARMenuManager != null)
-        {
-            _arMenuManger = potential_ARMenuManager;
-        }
-        else
-        {
-            _arMenuManger = null;
-        }
-    }*/
 
     public void RecievePreview()
     {
@@ -41,6 +28,7 @@ public class Song : MonoBehaviour
         else if (numTouch % 2 == 0)
         {
             numTouch = 0;
+            songInformation.SetActive(false);
             StopCoroutine("PreviewSong");
             Debug.Log(numTouch.ToString());
         }
@@ -55,8 +43,10 @@ public class Song : MonoBehaviour
         {
             audioSource.time = _previewStart;
             audioSource.Play();
+            songInformation.SetActive(true);
             yield return new WaitForSeconds(_previewDuration);            
             audioSource.Stop();
+            songInformation.SetActive(false);
             _completed = true;
         }
     }
