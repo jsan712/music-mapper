@@ -8,31 +8,33 @@ public class NodeCode : MonoBehaviour
     public AudioClip[] songs;
     private AudioSource source;
     public int index;
-    public GameObject nodeOptionsButton;
 
-    // Start is called before the first frame update
+    private bool isClicked = false;
+
+    [SerializeField] private GameObject nodeOptionsButton;
+    [SerializeField] private GameObject nodeOptionsMenu;
+
     void Start()
     {
         source = GetComponent<AudioSource>();
         source.clip = songs[index];
         source.Play();
 
-        nodeOptionsButton = GameObject.FindGameObjectWithTag("Options");
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void showMenuButton()
-    {
         nodeOptionsButton.SetActive(true);
+        nodeOptionsMenu.SetActive(false);
     }
 
-    public void hideMenuButton()
+    public void showHideMenu()
     {
-        nodeOptionsButton.SetActive(false);
+        if (!isClicked)
+        {
+            nodeOptionsMenu.SetActive(true);
+            isClicked = true;
+        }
+        else
+        {
+            nodeOptionsMenu.SetActive(false);
+            isClicked = false;
+        }
     }
 }

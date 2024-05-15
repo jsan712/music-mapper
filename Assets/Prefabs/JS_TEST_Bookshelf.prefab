@@ -4943,6 +4943,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5250313875642845396}
+        m_TargetAssemblyTypeName: ActivateNode, Assembly-CSharp
+        m_MethodName: CreateNode
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_LastFocusExited:
     m_PersistentCalls:
       m_Calls:
@@ -5081,7 +5093,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 68
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 2
