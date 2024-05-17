@@ -20,7 +20,7 @@ public class NodeCode : MonoBehaviour
         source.clip = songs[index];
         source.Play();
 
-        nodeOptionsButton.SetActive(true);
+        nodeOptionsButton.SetActive(false);
         nodeOptionsMenu.SetActive(false);
     }
 
